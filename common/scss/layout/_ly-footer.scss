@@ -1,0 +1,11 @@
+@use "../lib" as l;
+
+.ly_footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: l.$cMain;
+}
+
+.ly_footer_inner {
+  @include l.center;
+}

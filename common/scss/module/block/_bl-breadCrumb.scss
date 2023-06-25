@@ -1,0 +1,12 @@
+@use "../../lib/" as l;
+
+.bl_breadCrumb {
+  & span:last-of-type > a {
+    text-decoration: underline;
+  }
+  &_link {
+    &:hover {
+      color: l.$cTextHover;
+    }
+  }
+}

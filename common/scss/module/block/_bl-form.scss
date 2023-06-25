@@ -1,0 +1,45 @@
+@use "../../lib" as l;
+
+.bl_form {
+  border: 1px solid l.$cText;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  &_text {
+    font-family: l.$baseFont;
+    padding-bottom: 30px;
+  }
+  &_contents {
+    padding-bottom: 20px;
+  }
+  &_subTitle {
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  &_folder {
+    border-radius: 5px;
+    border: 1px solid l.$cText;
+    display: block;
+    width: 55%;
+    height: 40px;
+    padding: 5px;
+    &-textarea {
+      border: 1px solid l.$cText;
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+@include l.break_sp {
+  .bl_form {
+    &_folder {
+      width: 100%;
+      &-textarea {
+        height: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../lib" as l;
+
+.ly_subHeader {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: l.$cWhite;
+  width: 100%;
+}
+.ly_subHeader_inner {
+  @include l.center;
+}

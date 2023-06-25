@@ -1,0 +1,18 @@
+@use "../lib" as l;
+
+.ly_form {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background-color: l.$cWhite;
+  &_inner {
+    @include l.center;
+  }
+}
+
+//sp版
+@include l.break_sp {
+  .ly_form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

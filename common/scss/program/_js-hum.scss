@@ -1,0 +1,38 @@
+@use "../lib" as l;
+
+@include l.break_sp {
+  .js_hum {
+    &_body {
+      transition: transform 0.7s;
+
+      &.is_active {
+        right: -75%;
+        transform: translateX(-100%);
+
+        & .js_hum_link {
+          color: l.$cWhite;
+        }
+      }
+    }
+
+    &_btn {
+      z-index: 1100;
+
+      & > span {
+        transition: transform 0.7s;
+      }
+      &.is_active > span {
+        background-color: l.$cWhite;
+        &:nth-child(1) {
+          transform: translateY(14px) rotate(135deg);
+        }
+        &:nth-child(2) {
+          transform: scaleX(0) translateX(-20px);
+        }
+        &:nth-child(3) {
+          transform: translateY(-14px) rotate(-135deg);
+        }
+      }
+    }
+  }
+}

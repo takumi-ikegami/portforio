@@ -1,0 +1,22 @@
+@use "../../lib" as l;
+
+.el_topBtn {
+  position: fixed;
+  background-color: l.$cTopButton;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  right: 50px;
+  bottom: 30px;
+  &:hover {
+    background-color: l.$cTextHover;
+  }
+}
+
+@include l.break_sp {
+  .el_topBtn {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+  }
+}

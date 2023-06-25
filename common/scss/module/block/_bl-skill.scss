@@ -1,0 +1,49 @@
+@use "../../lib" as l;
+
+.bl_skill {
+  &_title {
+    font-size: l.$lFont;
+    font-family: l.$title;
+    text-shadow: 0.5px 0.5px 3px l.$cShadow;
+    & .char {
+      &:first-child {
+        font-size: l.$titleFont;
+      }
+    }
+  }
+  &_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  &_item {
+    width: 280px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &_subTitle {
+    text-align: center;
+    font-size: l.$subTitle;
+    font-family: l.$baseFont;
+    color: l.$cSubTitle;
+  }
+  &_imgContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &_img {
+    margin: 0 auto;
+    display: block;
+    height: 100px;
+  }
+}
+
+@include l.break_sp {
+  .bl_skill {
+    &_item {
+      width: 100%;
+    }
+  }
+}

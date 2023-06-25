@@ -1,0 +1,45 @@
+@use "../../lib" as l;
+
+.bl_modal {
+  width: 100%;
+  height: 100vh;
+  &_back {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+  }
+  &_inner {
+    position: fixed;
+    background-color: l.$cWhite;
+    max-width: 900px;
+    width: 100%;
+    overflow: scroll;
+
+    @include l.break_setMax(950px) {
+      max-width: 90%;
+    }
+  }
+  &_container {
+    border-bottom: 2px solid l.$cText;
+  }
+  &_img {
+    width: 100%;
+    padding-bottom: 40px;
+    box-shadow: 0.5px 0.5px 3px l.$cTextHover;
+  }
+  &_link {
+    &:hover {
+      color: l.$cTextHover;
+    }
+  }
+  &_item {
+    padding-bottom: 40px;
+  }
+  &_subTitle {
+    font-size: l.$subTitle;
+    font-family: l.$baseFont;
+    padding-bottom: 10px;
+  }
+}

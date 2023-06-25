@@ -1,0 +1,24 @@
+@use "../../lib" as l;
+
+.el_buttonA {
+  &_container {
+    display: flex;
+    justify-content: end;
+  }
+  & > span {
+    background-color: l.$cText;
+    width: 40px;
+    height: 2px;
+    display: block;
+    margin-bottom: 12px;
+    &:nth-child(1) {
+      transform: translateY(14px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      transform: scaleX(0);
+    }
+    &:nth-child(3) {
+      transform: translateY(-14px) rotate(-45deg);
+    }
+  }
+}

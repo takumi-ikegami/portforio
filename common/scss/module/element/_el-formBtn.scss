@@ -1,0 +1,23 @@
+@use "../../lib" as l;
+
+.el_formBtn {
+  text-align: center;
+  padding-bottom: 15px;
+  &_wrap {
+    padding-top: 20px;
+  }
+  &_btn {
+    display: inline-block;
+    font-family: l.$baseFont;
+    color: l.$cWhite;
+    padding: 10px;
+    max-width: 200px;
+    width: 100%;
+    background-color: l.$cTopButton;
+    font-size: l.$baseUpFont;
+    border-radius: 50px;
+    &:hover {
+      background-color: l.$cTextHover;
+    }
+  }
+}

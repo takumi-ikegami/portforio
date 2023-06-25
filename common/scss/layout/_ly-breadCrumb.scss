@@ -1,0 +1,10 @@
+@use "../lib" as l;
+
+.ly_breadCrumb {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &_inner {
+    @include l.center;
+    max-width: 1000px;
+  }
+}

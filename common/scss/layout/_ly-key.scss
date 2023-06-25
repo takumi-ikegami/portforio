@@ -1,0 +1,17 @@
+@use "../lib" as l;
+
+.ly_key {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  background-color: l.$cWhite;
+  &_inner {
+    @include l.center;
+  }
+}
+
+//sp版
+@include l.break_sp {
+  .ly_key {
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../lib" as l;
+
+.js_modalWindow {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.fixed {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}

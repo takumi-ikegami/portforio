@@ -1,0 +1,82 @@
+@use "../../lib" as l;
+
+.bl_headerNav {
+  &_container {
+    height: 30px;
+  }
+  &_itemWrap {
+    height: 100%;
+  }
+  &_link {
+    color: l.$cText;
+    font-family: l.$baseFont;
+    font-size: l.$baseUpFont;
+    height: 100%;
+    &:hover {
+      color: l.$cTextHover;
+    }
+  }
+}
+
+//スマホ版
+@include l.break_sp {
+  .bl_headerNav {
+    display: flex;
+    justify-content: end;
+
+    &_hum {
+      & > span {
+        background-color: l.$cMain;
+        width: 40px;
+        height: 2px;
+        display: block;
+        margin-bottom: 12px;
+        transition: transform 0.7s;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_container {
+      position: fixed;
+      z-index: 1000;
+      height: 500px;
+      width: 70vw;
+      top: 0;
+      right: -75%;
+      text-align: center;
+      background-color: l.$cMain;
+      opacity: 0.95;
+    }
+
+    &_itemWrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+//pc版
+@include l.break_pc {
+  .bl_headerNav {
+    &_itemWrap {
+      display: flex;
+      justify-content: end;
+    }
+
+    &_item {
+      margin-left: 20px;
+    }
+
+    &_hum {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../lib" as l;
+
+.ly_modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  &_inner {
+    padding: 50px;
+    margin: 0 auto;
+    top: 50px;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+  }
+}
+
+@include l.break_sp {
+  .bl_modal {
+    &_inner {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

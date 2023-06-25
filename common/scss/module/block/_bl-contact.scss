@@ -1,0 +1,44 @@
+@use "../../lib/" as l;
+
+.bl_contact {
+  &_title {
+    font-size: l.$lFont;
+    font-family: l.$title;
+    text-shadow: 0.5px 0.5px 3px l.$cShadow;
+    visibility: hidden;
+    & .char {
+      &:first-child {
+        font-size: l.$titleFont;
+      }
+    }
+  }
+  &_textContainer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &_link {
+    text-decoration: underline;
+    &:hover {
+      color: l.$cTextHover;
+    }
+  }
+  &_text {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    font-family: l.$baseFont;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+//sp版
+@include l.break_sp {
+  .bl_contact {
+    &_text {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

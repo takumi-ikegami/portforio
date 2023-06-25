@@ -1,0 +1,14 @@
+@use "../../lib" as l;
+
+.bl_works {
+  &_title {
+    font-size: l.$lFont;
+    font-family: l.$title;
+    text-shadow: 0.5px 0.5px 3px l.$cShadow;
+    & .char {
+      &:first-child {
+        font-size: l.$titleFont;
+      }
+    }
+  }
+}

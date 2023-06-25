@@ -1,0 +1,8 @@
+.js_drop.is_active {
+  visibility: visible;
+  & .char {
+    display: inline-block;
+    visibility: hidden;
+    transform: translateY(0px);
+  }
+}

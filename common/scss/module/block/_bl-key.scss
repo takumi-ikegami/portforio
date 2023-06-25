@@ -1,0 +1,41 @@
+@use "../../lib" as l;
+
+.bl_key {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_img {
+    background-image: url(../img/glasses.png);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    height: 300px;
+    width: 100%;
+  }
+
+  &_title {
+    visibility: hidden;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 50px;
+    font-size: l.$lFont;
+    color: l.$cText;
+    font-family: l.$title;
+    text-shadow: 0.5px 0.5px 3px l.$cShadow;
+  }
+}
+
+//sp版
+@include l.break_sp {
+  .bl_key {
+    &_img {
+      background-position: right center;
+      background-size: 300px;
+
+      @include l.break_setMax(300px) {
+        background-size: 70%;
+      }
+    }
+  }
+}

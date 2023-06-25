@@ -1,0 +1,9 @@
+@use "../../lib" as l;
+
+.el_footerCopyright {
+  display: block;
+  text-align: center;
+  color: l.$cWhite;
+  position: sticky;
+  top: 100vh;
+}

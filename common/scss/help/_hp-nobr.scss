@@ -1,0 +1,13 @@
+@use "../lib" as l;
+
+@include l.break_pc {
+  .hp_nobr_pc > br {
+    display: none;
+  }
+}
+
+@include l.break_sp {
+  .hp_nobr_sp > br {
+    display: none;
+  }
+}
